@@ -1,0 +1,57 @@
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/imagenes/metegol.png')no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+p
+{
+    position: absolute;
+    top: 93%;
+    color: ghostwhite;
+    font-size: 15px;
+}
+
+.spinner
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+.spinner img
+{
+    width: 80%;
+    animation: cambio 1.5s infinite linear;
+}
+
+.logo
+{
+    position: absolute;
+    width: 25%;
+    top: 83%;
+}
+
+@keyframes cambio
+{
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+@media (max-height: 737px) 
+{
+    p
+    {
+        top: 94%;
+    }
+}

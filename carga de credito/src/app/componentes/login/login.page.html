@@ -1,0 +1,31 @@
+<div class="contenedor">
+  <div class="contenedorLogin">
+    <form action="">
+      <img src="../../../assets/imagenes/qr.png" alt="">
+      <div class="datos">
+        <input type="text" id="correo" placeholder="Correo electronico" maxlength="25">
+        <br>
+        <input type="password" id="pass" placeholder="Contraseña" maxlength="25" minlength="4">
+      </div>
+      <div class="button">
+        <input type="submit" value="Enviar" id="submit" (click)="OnLogin()">
+        <input type="button" value="Limpiar" id="limpiar" (click)="Limpiar()">
+      </div>
+      <div class="mensaje" id="mensaje" hidden>
+        <span id="mensajeTexto"></span>
+        <ion-icon name="close-outline" (click)="Ocultar()"></ion-icon>
+      </div>
+    </form>
+  </div>
+  <div class="usuarios">
+      <ion-select id="elegir" (ionChange)="completar()" placeholder="Seleccione una opcion">
+        <ion-select-option *ngFor="let item of this.datosList" id="options" [value]="item.correo">
+          {{item.correo}}
+        </ion-select-option>
+      </ion-select>
+  </div>
+  <div id="loading" class="loading" hidden>
+    <img src="../../../assets/imagenes/loading.gif" alt="">
+  </div>
+  <ion-backdrop id="backdrop" hidden></ion-backdrop>
+</div>

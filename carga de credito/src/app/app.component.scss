@@ -1,0 +1,72 @@
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(65, 185, 221);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.spinner
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+p
+{
+    position: absolute;
+    top: 94%;
+    font-size: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: ghostwhite;
+}
+
+.spinner img
+{
+    width: 80%;
+    animation: cambio 1.5s infinite;
+}
+
+.logo
+{
+    position: absolute;
+    width: 25%;
+    top: 85%;
+}
+
+@keyframes cambio
+{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+
+@media (max-height: 641px)
+{
+    .logo
+    {
+        top: 83%;
+    }
+}
+
+@media (max-height: 737px)
+{
+    .logo
+    {
+        top: 83%;
+    }
+}
+
+@media (max-height: 569px)
+{
+    p
+    {
+        top: 93%
+    }
+}

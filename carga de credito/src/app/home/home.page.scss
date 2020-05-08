@@ -1,0 +1,149 @@
+*
+{
+    padding: 0%;
+    margin: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: ghostwhite;
+}
+
+.container
+{
+    width: 100%;
+    height: 100%;
+    background: rgb(65, 185, 221);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.carga
+{
+    background:ghostwhite;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 70vh;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 2px 25px 0px rgba(0,0,0,0.75);
+}
+
+button
+{
+    width: 60%;
+    height: 20%;
+    border-radius: 5px;
+    background: rgb(65, 185, 221);
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    margin: 4% auto;
+    font-size: 25px;
+}
+
+button:active
+{
+    border-radius: 25px;
+    background: rgb(39, 92, 134);
+    border: 2px solid rgb(75, 147, 206);
+}
+
+h1
+{
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.textCarga
+{
+  position: absolute;
+  bottom: 90%
+}
+
+.cargado
+{
+  position: absolute;
+  top: 90%;
+}
+
+.mensaje
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+    height: 7%;
+    left: 20%;
+    bottom: 5%;
+    background: rgb(255, 0, 0);
+    border-radius: 4px;
+    font-size: 1em;
+    animation-name: aparicion;
+    animation-duration: 1s;
+}
+
+@keyframes aparicion
+{
+    0% {background-color:rgb(5, 5, 5); bottom:-400px}
+  100%  {background-color:rgb(255, 0, 0); left:20%;}
+
+}
+
+span
+{
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ion-icon
+{
+    position: absolute;
+    color: ghostwhite;
+    width: 6vw;
+    height: 2vh;
+    right: 0vw;
+    top: 5%;
+}
+
+.arrow
+{
+    position: absolute;
+    top: 1%;
+    width: 25%;
+    height: 4%;
+    right: 81%;
+    outline: none;
+}
+
+img
+{
+    position: absolute;
+    width: 50%;
+    top: 53%;
+}
+
+.cargar
+{
+    margin-top: -65%
+}
+
+.limpiar
+{
+    background: ghostwhite;
+    position: absolute;
+    top: -0.5%;
+    left: 78%;
+    width: 20%;
+    height: 3% !important;
+    font-size: 1em;
+    color: black;
+}

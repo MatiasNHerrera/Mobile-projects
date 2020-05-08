@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="listado">
+    <button (click)="volver()">Volver</button>
+    <h1>Los Mejores</h1>
+    <table>
+      <tr>
+        <th>Usuario</th>
+        <th>Ganados</th>
+      </tr>
+      <tr *ngFor="let jugador of ordenado">
+        <td>{{jugador.nombre}}</td>
+        <td>{{jugador.ganados}}</td>
+      </tr>
+    </table>
+</div>
+<div id="loadingGanadores" class="loading" hidden>
+  <img src="../../../assets/imagenes/loading.gif" alt="">
+</div>
+<ion-backdrop id="backdrop" hidden></ion-backdrop>
+</div>

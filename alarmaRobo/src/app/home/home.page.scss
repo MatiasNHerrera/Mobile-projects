@@ -1,0 +1,167 @@
+@import 'https://fonts.googleapis.com/css?family=Rubik+One';
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: ghostwhite;
+  font-family: 'Rubik One', sans-serif;
+}
+
+.containerHome
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(30, 28, 99);
+}
+
+.imagen
+{
+  text-align: center;
+}
+
+img
+{
+  width: 60%;
+}
+
+.buttons
+{
+  width: 70%;
+  height: 10%;
+  margin-top: 25%;
+}
+
+input[type=button]
+{
+  position: absolute;
+  top: 70%;
+  right: 14%;
+  width: 70%;
+  height: 17%;
+  border: none;
+  border-radius: 5px;
+  background: #ce3131;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  border-bottom: 16px solid #751c1c;
+  border-right: 11px solid #751c1c;
+  box-shadow: -1px 34px 26px -22px rgba(0, 0, 0, 0.75);
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type=button]:active
+{
+  border-bottom: 2px solid rgb(117, 28, 28);
+  border-right: 2px solid rgb(117, 28, 28);
+  box-shadow: none;
+}
+
+.animacion
+{
+  animation: rotacion 0.5s infinite linear;
+  animation-iteration-count: 2;
+}
+
+@keyframes rotacion
+{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(20deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-20deg);}
+    100%{transform: rotate(0deg);}
+}
+
+h1
+{
+  position: absolute;
+  bottom: 90%;
+}
+
+.validarClave
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  width: 50%;
+  height: 30%;
+  background: rgba(49, 49, 49, 0.5);
+}
+
+input[type=password]
+{
+  position: absolute;
+  top: 20%;
+  width: 70%;
+  height: 20%;
+  text-align: center;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+::placeholder
+{
+  color: ghostwhite;
+}
+
+.aceptar
+{
+  top: 55% !important;
+  width: 70% !important;
+  height: 30% !important;
+}
+
+ion-icon
+{
+  font-size: 25px;
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  outline: none;
+}
+
+@media (max-width: 776px) and (orientation: landscape)
+{
+  img
+  {
+    margin-top: 10%;
+    width: 30%;
+  }
+
+  .buttons
+  {
+    margin-top: 5%;
+  }
+
+  input[type=button]
+  {
+    right: 23%;
+    width: 45%;
+    margin: 4%;
+  }
+
+  h1
+  {
+    bottom: 85%;
+  }
+
+  .aceptar
+  {
+    border-bottom: 12px solid #751c1c !important;
+    top: 45% !important;
+    left: 11%;
+  }
+}

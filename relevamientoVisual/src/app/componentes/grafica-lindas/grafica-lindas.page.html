@@ -1,0 +1,12 @@
+<div class="container">
+  <ion-icon name="arrow-undo-circle-outline" routerLink="/cosas-lindas"></ion-icon>
+  <div class="grilla">
+    <ul>
+      <li *ngFor="let fotos of listadoConVotos"><img src="{{fotos.path}}" alt=""><p>Votos | {{fotos.votos}}</p></li>
+    </ul>
+  </div>
+  <div id="loadingMasVotadas" class="loading" hidden>
+    <img src="../../../assets/imagenes/loading.gif" alt="">
+  </div>
+</div>
+<ion-backdrop id="backdropMasVotadas" hidden></ion-backdrop>

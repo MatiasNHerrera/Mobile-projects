@@ -1,0 +1,16 @@
+<div class="containerHome" id="containerHome">
+    <ion-icon name="arrow-undo-circle" (click)="volver()"></ion-icon>
+    <h1 id="mensajeHome">DESACTIVADA</h1>
+    <div class="imagen">
+      <img id="img" src="../../assets/imagenes/alarmaHome.png" alt="">
+    </div>
+    <div class="buttons">
+      <input type="button" value="ACTIVAR" (click)="activar()" *ngIf="!activada">
+      <input type="button" value="DESACTIVAR" (click)="validarClave()" *ngIf="activada">
+    </div>
+</div>
+<div class="validarClave" hidden id="validarClave">
+  <input type="password" placeholder="Ingrese clave" [(ngModel)]="this.clave">
+  <input type="button" value="Aceptar" class="aceptar" (click)="desactivar()">
+</div>
+

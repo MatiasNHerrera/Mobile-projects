@@ -1,0 +1,90 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  color: ghostwhite;
+}
+
+.container
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/imagenes/fondo.jpg")no-repeat;
+  background-size: cover;
+}
+
+.idiomas, .temas
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(4,4,4,0.6);
+}
+
+img
+{
+  width: 80%;
+  margin: 10% auto;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.button
+{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%;
+  height: 5%;
+
+}
+
+button
+{
+  width: 100%;
+  height: 100%;
+  background: rgb(209, 165, 42);
+  border : none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.2s;
+}
+
+button:active
+{
+  transform: scale(1.2);
+  background: black;
+}
+
+.seleccionadoHome
+{
+  opacity: 1;
+}
+
+@media (max-width: 776px) and (orientation: landscape)
+{
+  img
+  {
+    width: 20%;
+    margin: 3% auto;
+  }
+
+  h1
+  {
+    position: absolute;
+    bottom: 85%;
+  }
+
+  .button
+  {
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    height: 15vh;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="containerLogin">
+  <!---<div class="particion"></div>  Codigo para diseño de pantalla partida en 45 grados  --->
+  <form class="form" (ngSubmit)="OnLogin()">
+    <div class="correo">
+      <label>Correo electronico</label>
+      <span><ion-icon name="person"></ion-icon></span>
+      <input type="text" id="email" maxlength="30">
+    </div>
+    <div class="clave">
+      <label>Contraseña</label>
+      <span><ion-icon name="lock-closed"></ion-icon></span>
+      <input type="password" id="pass" maxlength="25">
+    </div>
+    <div class="button">
+      <input type="submit" value="Enviar">
+      <input type="button" value="Limpiar" (click)="Limpiar()">
+    </div>
+  </form>
+  <div class="usuarios">
+    <button (click)="completar('admin@admin.com')">AD</button>
+    <button (click)="completar('invitado@invitado.com')">IN</button>
+    <button (click)="completar('anonino@anonimo.com')">AN</button>
+    <button (click)="completar('usuario@usuario.com')">US</button>
+    <button (click)="completar('tester@tester.com')">TE</button>
+  </div>
+  <div id="loading" class="loading" hidden>
+    <img src="../../../assets/imagenes/loading.gif" alt="">
+  </div>
+  <div class="mensaje" id="mensaje" hidden>
+    <p id="mensajeTexto">dasdsad</p>
+    <ion-icon name="close-outline" (click)="Ocultar()"></ion-icon>
+  </div>
+  <ion-backdrop id="backdrop" hidden></ion-backdrop>
+</div>

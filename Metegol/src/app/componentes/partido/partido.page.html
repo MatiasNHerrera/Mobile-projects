@@ -1,0 +1,37 @@
+<ion-content>
+  <div class="container">
+      <button class="volver" routerLink="/home/admin">Volver</button>
+      <div class="j1" id="jug1">
+        <label>{{this.datos.jugadorUno | uppercase}}</label>
+        <p id="golesJ1">Goles: {{golesJ1}}</p>
+        <button (click)="sumarGoles('jugadorUno', 'sumar')" class="resultados">+</button>
+        <button (click)="sumarGoles('jugadorUno', 'restar')">-</button>
+      </div>
+      <div class="j2" id="jug2">
+        <label>{{this.datos.jugadorDos | uppercase}}</label>
+        <p id="golesJ2">Goles: {{golesJ2}}</p>
+        <button (click)="sumarGoles('jugadorDos', 'sumar')" class="resultados">+</button>
+        <button (click)="sumarGoles('jugadorDos', 'restar')">-</button>
+      </div>
+      <div class="finalizar" *ngIf="!finalizo else tomarFoto">
+        <button class="terminar" (click)="finalizar()">Finalizar encuentro</button>
+          <div class="imagenes">
+            <img src="../../../assets/imagenes/arquero.png" alt="" class="arqueroUno">
+            <img src="../../../assets/imagenes/arqueroDos.png" alt="" class="arqueroDos">
+          </div>
+      </div>
+      <ng-template #tomarFoto>
+        <div class="tomarFoto">
+          <button class="foto" (click)="tomarFotografia()">Tomar Fotografia</button>
+          <button class="foto" (click)="cargarResultados()">Cargar Resultado</button>
+        </div>
+      </ng-template>
+  </div>
+  <div id="loadingPartido" class="loading" hidden>
+    <img src="../../../assets/imagenes/loading.gif" alt="">
+  </div>
+  <div class="mensaje" id="mensajePartido" style="display: none;">
+    <p id="mensajeTextoPartido"></p>
+  </div>
+  <ion-backdrop id="backdropPartido" hidden></ion-backdrop>
+</ion-content>

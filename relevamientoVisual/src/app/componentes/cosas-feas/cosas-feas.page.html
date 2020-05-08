@@ -1,0 +1,12 @@
+<div class="container" id="containerCosasFeas">
+  <ion-icon name="arrow-undo-circle-outline" routerLink="/home"></ion-icon>
+  <button (click)="tomarFoto()">TOMAR FOTO</button>
+  <button (click)="subirFoto()">SUBIR FOTO</button>
+  <button (click)="redirigir('galeria-fea')">GALERIA</button>
+  <button (click)="redirigir('grafica-feas')">MAS VOTADAS</button>
+</div>
+<div id="loadingCosasFeas" class="loading" hidden>
+  <img src="../../../assets/imagenes/loading.gif" alt="">
+  <h1 id="mensajeCosasFeas"></h1>
+  <ion-backdrop id="backdropCosasFeas" hidden></ion-backdrop>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <!---<div class="particion"></div>  Codigo para diseño de pantalla partida en 45 grados--->
+  <form class="form" (ngSubmit)="OnLogin()">
+      <img src="../../../assets/imagenes/niño.png" alt="">
+      <div class="correo">
+        <input placeholder="Ingrese correo" type="text" id="email">
+      </div>
+      <div class="clave">
+        <input placeholder="Ingrese clave" type="password" id="pass">
+      </div>
+      <div class="buttons">
+        <input type="submit" value="Enviar">
+        <input type="button" value="Limpiar" (click)="Limpiar()">
+      </div>     
+  </form>
+  <div class="usuarios">
+    <select id="elegir" (change)="completar()">
+      <option hidden selected>Seleccione una opcion</option>
+      <option *ngFor="let item of this.datosList" id="options">
+        {{item.correo}}
+      </option>
+    </select>
+  </div>
+  <div class="loading" id="loading" hidden>
+    <div class="loader"></div>
+  </div>
+  <div class="mensaje" id="mensaje" style="display: none;">
+    <p id="mensajeTexto"></p>
+  </div>
+  <ion-backdrop id="backdrop" hidden></ion-backdrop>
+</div>

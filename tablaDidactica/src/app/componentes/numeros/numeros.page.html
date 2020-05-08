@@ -1,0 +1,28 @@
+<div class="container">
+  <ion-icon name="arrow-undo" routerLink="/home"></ion-icon>
+  <div class="eleccion">
+    <img src="../../../assets/imagenes/españa.png" (click)="cambiarIdioma('español')" alt="" id="españolNumeros">
+    <img src="../../../assets/imagenes/portugal.png" (click)="cambiarIdioma('portugues')" alt="" id="portuguesNumeros">
+    <img src="../../../assets/imagenes/reino.png" (click)="cambiarIdioma('ingles')" alt="" id="inglesNumeros">
+  </div>
+  <div class="temas">
+    <img src="../../../assets/imagenes/animales.png" alt="" routerLink="/animales/{{this.idioma}}">
+    <img src="../../../assets/imagenes/colores.png" alt="" routerLink="/colores/{{this.idioma}}">
+  </div>
+  <div class="colores">
+    <img src="../../../assets/imagenes/uno.png" alt="" (click)="reproducirAudio('uno')">
+    <img src="../../../assets/imagenes/dos.png" alt="" (click)="reproducirAudio('dos')">
+    <img src="../../../assets/imagenes/tres.png" alt="" (click)="reproducirAudio('tres')">
+    <img src="../../../assets/imagenes/cuatro.png" alt="" (click)="reproducirAudio('cuatro')">
+    <img src="../../../assets/imagenes/cinco.png" alt="" (click)="reproducirAudio('cinco')">
+    <img src="../../../assets/imagenes/seis.png" alt="" (click)="reproducirAudio('seis')">
+    <img src="../../../assets/imagenes/siete.png" alt="" (click)="reproducirAudio('siete')">
+    <img src="../../../assets/imagenes/ocho.png" alt="" (click)="reproducirAudio('ocho')">
+    <img src="../../../assets/imagenes/nueve.png" alt="" (click)="reproducirAudio('nueve')">
+    <img src="../../../assets/imagenes/diez.png" alt="" (click)="reproducirAudio('diez')">
+  </div>
+  <div class="loading" id="loadingNumeros" hidden>
+    <div class="loader"></div>
+  </div>
+  <ion-backdrop id="backdrop" hidden></ion-backdrop>
+</div>

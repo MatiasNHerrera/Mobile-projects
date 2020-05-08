@@ -1,0 +1,19 @@
+<div class="container" id="containerCosasFeas">
+  <ion-icon name="arrow-undo-circle-outline" routerLink="/cosas-feas"></ion-icon>
+  <div class="grilla">
+      <ul>
+        <li *ngFor="let foto of this.urlOrdenado"><img alt="" src="{{foto}}"><ion-icon name="star" id="ion-star-feas" class="fav" (click)="validarFavoritas(foto)"></ion-icon></li>
+      </ul>
+  </div>
+  <div id="loadingGaleriaCosasFeas" class="loading" hidden>
+    <img src="../../../assets/imagenes/loading.gif" alt="">
+  </div>
+  <div class="buttons" *ngIf="!mostrarError">
+    <button (click)="traerFotos('todas')">Todas</button>
+    <button (click)="traerFotos('usuario')">Usuario</button>
+  </div>
+  <div class="error" id="error" *ngIf="mostrarError">
+    <p class="errorMensaje">¡Ya votaste esta foto como favorita!</p>
+  </div>
+</div>
+<ion-backdrop id="backdropGaleriaCosasFeas" hidden></ion-backdrop>

@@ -1,0 +1,19 @@
+<div class="container">
+  <button class="volver" (click)="volver()">Volver</button>
+  <button class="listado" routerLink="/listado/{{this.perfil}}">Listado</button>
+  <div class="jugadores">
+    <div class="jugadorUno">
+      <label>Ingrese jugador 1</label>
+      <input type="text" id="j1" maxlength="20" [(ngModel)]="jugadorUno">
+    </div>
+    <div class="jugadorDos">
+      <label>Ingrese jugador 2</label>
+      <input type="text" id="j2" maxlength="20" [(ngModel)]="jugadorDos">
+    </div>
+    <div class="fecha">
+      <label>Fecha del partido</label>
+      <input type="text" id="j2" maxlength="20" [(ngModel)]="fecha">
+    </div>
+    <input type="button" value="Crear Partido" (click)="crearPartido()">
+  </div>
+</div>

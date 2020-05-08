@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="listado">
+      <button class="volver" (click)="volver()">Volver</button>
+      <button class="ganadores" routerLink="/mas-ganadores/{{this.perfil}}">Mejores</button>
+      <h1>Resultados</h1>
+      <table>
+        <tr>
+          <th>FECHA</th>
+          <th>RESULTADO</th>
+          <th>JUGADORES</th>
+          <th>FOTO</th>
+        </tr>
+        <tr *ngFor="let resultado of listadoOrdenado">
+          <td>{{resultado.fecha}}</td>
+          <td>{{resultado.resultado}}</td>
+          <td>{{resultado.jugadorUno}} vs {{resultado.jugadorDos}}</td>
+          <td><img [src]=resultado.foto  width="30%"></td>
+        </tr>
+      </table>
+  </div>
+</div>

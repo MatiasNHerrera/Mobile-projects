@@ -1,0 +1,25 @@
+
+  <div class="container">
+    <ion-icon name="arrow-undo" routerLink="/home"></ion-icon>
+    <div class="eleccion">
+      <img src="../../../assets/imagenes/españa.png" (click)="cambiarIdioma('español')" alt="" id="españolAnimales">
+      <img src="../../../assets/imagenes/portugal.png" (click)="cambiarIdioma('portugues')" alt="" id="portuguesAnimales">
+      <img src="../../../assets/imagenes/reino.png" (click)="cambiarIdioma('ingles')" alt="" id="inglesAnimales">
+    </div>
+    <div class="temas">
+      <img src="../../../assets/imagenes/numeros.png" alt="" routerLink="/numeros/{{this.idioma}}">
+      <img src="../../../assets/imagenes/colores.png" alt="" routerLink="/colores/{{this.idioma}}">
+    </div>
+    <div class="colores">
+      <img src="../../../assets/imagenes/perro.png" alt="" (click)="reproducirAudio('perro')">
+      <img src="../../../assets/imagenes/mono.png" alt="" (click)="reproducirAudio('mono')">
+      <img src="../../../assets/imagenes/cebra.png" alt="" (click)="reproducirAudio('cebra')">
+      <img src="../../../assets/imagenes/caballo.png" alt="" (click)="reproducirAudio('caballo')">
+      <img src="../../../assets/imagenes/jirafa.png" alt="" (click)="reproducirAudio('jirafa')">
+      <img src="../../../assets/imagenes/tigre.png" alt="" (click)="reproducirAudio('tigre')">
+    </div>
+    <div class="loading" id="loadingAnimales" hidden>
+      <div class="loader"></div>
+    </div>
+    <ion-backdrop id="backdrop" hidden></ion-backdrop>
+  </div>

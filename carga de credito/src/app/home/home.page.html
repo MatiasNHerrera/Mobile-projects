@@ -1,0 +1,15 @@
+<div class="container">
+  <ion-icon name="arrow-back-circle" class="arrow" routerLink="/login"></ion-icon>
+  <div class="carga">
+    <h1 class="textCarga">Carga QR</h1>
+    <button (click)="scannearQR()" class="cargar">Cargar</button>
+    <img src="../../assets/imagenes/manoCelular.webp" alt="" width="40%">
+    <h1 id="creditoCargado" class="cargado">Disponible: 0</h1>
+  </div>
+  <div class="mensaje" id="mensajeHome" hidden>
+    <span id="mensajeTextoHome"></span>
+    <ion-icon name="close-outline" (click)="Ocultar()"></ion-icon>
+  </div>
+  <button (click)="limpiarCreditos()" class="limpiar">Limpiar</button>
+</div>
+

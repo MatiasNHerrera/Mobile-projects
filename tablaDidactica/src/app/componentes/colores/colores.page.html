@@ -1,0 +1,25 @@
+
+  <div class="container">
+    <ion-icon name="arrow-undo" routerLink="/home"></ion-icon>
+    <div class="eleccion">
+      <img src="../../../assets/imagenes/españa.png" (click)="cambiarIdioma('español')" alt="" id="españolColores">
+      <img src="../../../assets/imagenes/portugal.png" (click)="cambiarIdioma('portugues')" alt="" id="portuguesColores">
+      <img src="../../../assets/imagenes/reino.png" (click)="cambiarIdioma('ingles')" alt="" id="inglesColores">
+    </div>
+    <div class="temas">
+      <img src="../../../assets/imagenes/numeros.png" alt="" (click)="redirigir('numeros')">
+      <img src="../../../assets/imagenes/animales.png" alt="" (click)="redirigir('animales')">
+    </div>
+    <div class="colores">
+      <img src="../../../assets/imagenes/azul.jpg" alt="" (click)="reproducirAudio('azul')">
+      <img src="../../../assets/imagenes/rojo.jpg" alt="" (click)="reproducirAudio('rojo')">
+      <img src="../../../assets/imagenes/amarillo.jpg" alt="" (click)="reproducirAudio('amarillo')">
+      <img src="../../../assets/imagenes/verde.jpg" alt="" (click)="reproducirAudio('verde')">
+      <img src="../../../assets/imagenes/naranja.jpg" alt="" (click)="reproducirAudio('naranja')">
+      <img src="../../../assets/imagenes/rosa.jpg" alt="" (click)="reproducirAudio('rosa')">
+    </div>
+    <div class="loading" id="loadingColores" hidden>
+      <div class="loader"></div>
+    </div>
+    <ion-backdrop id="backdrop" hidden></ion-backdrop>
+  </div>

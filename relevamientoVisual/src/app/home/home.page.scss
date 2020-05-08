@@ -1,0 +1,73 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  color: ghostwhite;
+}
+
+ion-toolbar
+{
+  --background: rgb(158, 211, 14);
+}
+
+ion-title
+{
+  text-align: center;
+}
+
+.container
+{
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../../assets/imagenes/fondito.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.imagenUno, .imagenDos
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.imagenUno
+{
+  border-bottom: 1px solid ghostwhite;
+}
+
+img
+{
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+}
+
+img:active
+{
+  
+}
+
+h1
+{
+  position: absolute;
+  font-size: 2em;
+  font-family: 'urban';
+  color: ghostwhite;
+}
+
+ion-icon
+{
+    position: absolute;
+    font-size: 40px;
+    top: 1%;
+    left: 2%;
+}

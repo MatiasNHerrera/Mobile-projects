@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="container">
+    <div class="idiomas">
+      <img src="../../assets/imagenes/españa.png" (click)="cambiarIdioma('español')"alt="" id="español">
+      <img src="../../assets/imagenes/reino.png" (click)="cambiarIdioma('ingles')" alt="" id="ingles">
+      <img src="../../assets/imagenes/portugal.png" (click)="cambiarIdioma('portugues')" alt="" id="portugues">
+    </div>
+    <div class="temas">
+      <img src="../../assets/imagenes/colores.png" (click)="cambiarTema('colores')" alt="" id="colores">
+      <img src="../../assets/imagenes/animales.png" (click)="cambiarTema('animales')" alt="" id="animales">
+      <img src="../../assets/imagenes/numeros.png" (click)="cambiarTema('numeros')" alt="" id="numeros">
+    </div>
+  </div>
+  <div class="button" *ngIf="!idioma=='' && !tema==''">
+    <button (click)="redirigir()">CONTINUAR</button>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+<div class="container">
+  <!---<div class="particion"></div>  Codigo para diseño de pantalla partida en 45 grados  --->
+  <form class="form" (ngSubmit)="OnLogin()">
+    <div class="correo">
+      <label>Correo electronico</label>
+      <input type="text" id="email" maxlength="30">
+    </div>
+    <div class="clave">
+      <label>Contraseña</label>
+      <input type="password" id="pass" maxlength="25">
+    </div>
+    <div class="button">
+      <input type="submit" value="Enviar">
+      <input type="button" value="Limpiar" (click)="Limpiar()">
+    </div>
+  </form>
+  <div class="usuarios">
+      <img src="../../../assets/imagenes/pelotaOption.png" *ngFor="let item of this.datosList" (click)="completar(item.correo)" id={{item.id}} width="18%">
+  </div>
+  <div id="loading" class="loading" hidden>
+    <img src="../../../assets/imagenes/loading.gif" alt="">
+  </div>
+  <div class="mensaje" id="mensaje" hidden>
+    <p id="mensajeTexto"></p>
+    <ion-icon name="close-outline" (click)="Ocultar()"></ion-icon>
+  </div>
+  <ion-backdrop id="backdrop" hidden></ion-backdrop>
+</div>

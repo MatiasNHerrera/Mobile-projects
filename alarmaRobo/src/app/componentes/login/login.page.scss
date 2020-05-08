@@ -1,0 +1,198 @@
+.contenedor
+{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../../../assets/imagenes/fondo.jpg!d);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenedorLogin
+{
+    position: relative;
+    display: flex;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(226, 226, 226, 0.5);
+    width: 80vw;
+    height: 70vh;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedorLogin img
+{
+    position: relative;
+    height: 17vh;
+    top: -17vw;
+    left: 0.5vw;
+    width: 36vw;
+    opacity: 0.8;
+    margin-top: 15vw;
+}
+
+.datos
+{
+    width: 20vw;
+    height: 20vh;
+    position: relative;
+    top: -10vw;
+}
+
+#correo, #pass
+{
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    color: ghostwhite;
+    border: none;
+    width: 60vw;
+    height: 7vh;
+    text-align: center;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+
+#pass
+{
+    margin-top: 5vw;
+}
+
+:-ms-input-placeholder { color: ghostwhite; }
+::placeholder { color: ghostwhite; }
+::-webkit-input-placeholder { color: ghostwhite; } /* WebKit */
+::-moz-placeholder { color: ghostwhite; }
+
+.button
+{
+    position: relative;
+    display: inline;
+    box-sizing: border-box;
+}
+
+#submit, #limpiar
+{
+    position: relative;
+    background: rgba(17, 31, 114, 0.9);
+    border: 2px solid ;
+    width: 28vw;
+    height: 6vh;
+    color: ghostwhite;
+    border: none;
+    border-radius: 5px;
+    bottom: 10vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+#submit
+{
+    margin-right: 4vw;
+}
+
+#submit:active, #limpiar:active
+{
+    box-shadow: 0px 2px 27px 1px rgba(0,0,0,0.75);
+    height: 5vh;
+}
+
+.mensaje
+{
+    position: absolute;
+    display: flex;
+    width: 60vw;
+    height: 7vh;
+    bottom: 5%;
+    background: rgb(255, 0, 0);
+    border-radius: 4px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 4vw;
+    color: ghostwhite;
+    animation-name: aparicion;
+    animation-duration: 1s;
+}
+
+@keyframes aparicion
+{
+    0% {background-color:rgb(5, 5, 5); left:-400px}
+  100%  {background-color:rgb(255, 0, 0); left:13%;}
+
+}
+
+span
+{
+    width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ion-icon
+{
+    position: relative;
+    color: ghostwhite;
+    width: 6vw;
+    height: 2vh;
+    right: 0vw;
+    bottom: 5vw;
+}
+
+.usuarios
+{
+    position: absolute;
+    width: 80vw;
+    height: 10vh;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.usuarios img
+{
+    margin: 2%;
+}
+
+select
+{
+    position: relative;
+    width: 70vw;
+    height: 5vh;
+    bottom: 10%;
+    border-radius: 10px;
+    border: none;
+    background: rgba(209, 207, 207, 0.5);
+    color: ghostwhite;
+    text-align-last: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+option
+{
+    background: gray;
+}
+
+
+.loading
+{
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30vw;
+    height: 20vh;
+}
