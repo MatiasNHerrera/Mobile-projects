@@ -2,7 +2,7 @@
   <ion-icon name="arrow-undo-circle-outline" routerLink="/cosas-feas"></ion-icon>
   <div class="grilla">
       <ul>
-        <li *ngFor="let foto of this.urlOrdenado"><img alt="" src="{{foto}}"><ion-icon name="star" id="ion-star-feas" class="fav" (click)="validarFavoritas(foto)"></ion-icon></li>
+        <li *ngFor="let foto of this.urlOrdenado"><img alt="" src="{{foto.foto}}"><p>{{foto.fecha}} - {{foto.usuario}}<ion-icon name="star" id="ion-star" class="fav" (click)="validarFavoritas(foto.foto)"></ion-icon></p></li>
       </ul>
   </div>
   <div id="loadingGaleriaCosasFeas" class="loading" hidden>

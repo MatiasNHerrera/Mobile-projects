@@ -52,20 +52,23 @@ export class GaleriaLindaPage implements OnInit {
       }
       
         let array = path.location.path.split("/");
-        console.log(array);
+        let arrayMuestra = array[1].split("_");
         let validacion = path.location.path.includes(`${this.perfil}`);
+        let datos;
         let refStorage = storage().ref("cosas-lindas");
 
         if(validacion && this.mostrarSoloUsuarios)
         {
           refStorage.child(array[1]).getDownloadURL().then((dato) =>{
-            this.url.push(dato);
+            datos = {foto : dato, fecha: arrayMuestra[0] + "_" + arrayMuestra[1], usuario: arrayMuestra[2]}
+            this.url.push(datos);
           });
         }
         else if(!this.mostrarSoloUsuarios)
         {
           refStorage.child(array[1]).getDownloadURL().then((dato) =>{
-            this.url.push(dato);
+            datos = {foto : dato, fecha: arrayMuestra[0] + "_" + arrayMuestra[1], usuario: arrayMuestra[2]}
+            this.url.push(datos);
           });
         }
         
@@ -80,7 +83,7 @@ export class GaleriaLindaPage implements OnInit {
   ordenar()
   {
     this.url.sort((a,b) => {
-      if(a < b)
+      if(a.fecha < b.fecha)
         return 1
       else
         return -1

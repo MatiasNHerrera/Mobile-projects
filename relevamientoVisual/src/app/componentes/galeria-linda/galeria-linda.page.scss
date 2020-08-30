@@ -20,8 +20,14 @@ $font-size : 1.3em;
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: url("../../../assets/imagenes/lindo.jpg")no-repeat;
+    background:
+       linear-gradient(
+         rgba(0, 0, 0, 0.3), 
+         rgba(0, 0, 0, 0.3)
+       ),
+       url(../../../assets/imagenes/lindo.jpg);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -37,7 +43,7 @@ ion-icon
     width: 50%;
     height: 40%;
     margin: 2% 3%;
-    border: 2px solid ghostwhite;
+    border: 2px solid black;
 }
 
 .grilla
@@ -85,8 +91,9 @@ ion-icon
 .fav
 {
     position: relative;
+    color: black;
+    font-size: 25px;
     left: 7%;
-    transform: translateY(-20%);
 }
 
 .error
@@ -109,5 +116,19 @@ ion-icon
 {
     text-align: center;
     font-size: 0.4em;
+    color: ghostwhite;
 }
 
+li
+{
+    background: rgba(248, 248, 248, 0.9);
+    width: 90%;
+    margin: 5% auto;
+}
+
+p
+{
+    font-size: 15px;
+    color: black;
+    padding: 2%;
+}
